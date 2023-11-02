@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@media (max-width:800px){
+.about_pc{
+    display: none;
+}
+    *{
+    padding: 0;
+    margin: 0;
+    /* transition-duration: 0.5s; */
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    /* font-size: 1em; */
+    position: relative;
+    background: url(../img/1.jpg);
+    overflow-x: hidden;
+}
+.bg_wrap{
+    width: 100%;
+    height: 300vh;
+    background: url(../img/1.jpg);
+    display: none;
+    position: absolute;
+    overflow-x: hidden;
+}
+/* .wrap{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 130%;
+} */ 
+/* .box{
+    width: 500px;
+    height: 500px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+} */
+.logo{
+    display: block;
+    width: 20vw;
+    height: 50px;
+    position: absolute;
+    top: 0.2%;
+    left:1%;
+    z-index: 9999999;
+  }
+  .menu_wrap{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    opacity: 0.8;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    padding-top: 40%;
+    overflow-x: hidden;
+}
+.menu{
+    display: block;
+    width: 100%;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 9%;
+    font-family: 'Prompt', sans-serif;
+}
+.menu:hover{
+    color: white;
+    /* border: 2px solid #F07339; */
+    -webkit-text-stroke:3px #F07339;
+}
+  .toggle {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0.5%;
+    right: 2%;
+    z-index: 999999;
+  }
+  .toggle span {
+    display: block;
+    background: #FFF;
+    width: 80%;
+    height: 3px;
+    border-radius: 2px;
+    transition: 0.25s margin 0.25s, 0.25s transform;
+  }
+  .toggle span:nth-child(1) {
+      margin-bottom: 8px;
+  }
+  .toggle span:nth-child(3) {
+      margin-top: 8px;
+  }
+  .toggle.active span {
+      transition: 0.25s margin, 0.25s transform 0.25s;
+      background: black;
+  }
+  .toggle.active span:nth-child(1) {
+    margin-top: 8px;
+    margin-bottom: -4px;
+      transform: rotate(45deg);
+  }
+  .toggle.active span:nth-child(2) {
+      transform: rotate(45deg);
+  }
+  .toggle.active span:nth-child(3) {
+    margin-top: -4px;
+      transform: rotate(135deg);
+  }
+  
+section{
+    width: 100%;
+    height: 50vh;
+    /* background: black; */
+    position: relative;
+    /* border: 1px solid rgb(255, 255, 255); */
+    box-sizing: border-box;
+    transition-duration: 3s;
+}
+.left_but{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    margin-left: -40px;
+    /* transform: scale(0.3); */
+    transition-duration: 1s;
+  }
+  .left_but:hover{
+    transform: scale(0.9);
+  }
+.about_text_box{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+.about_img_box{
+    width: 75%;
+    height: 100%;
+    position: absolute;
+}
+section:nth-child(4)>.about_img_box,section:nth-child(6)>.about_img_box,section:nth-child(8)>.about_img_box{
+    right: 0;
+}
+section:nth-child(3)>.about_text_box,section:nth-child(5)>.about_text_box,section:nth-child(7)>.about_text_box{
+    right: 0;
+}
+.box1>img{
+    position: absolute;
+    top: 50%;
+    margin-top: -30%;
+    left: 5%;
+    /* left: 10%; */
+}
+.box>img{
+    position: absolute;
+    top: 50%;
+    margin-top: -30%;
+    right: 5%;
+}
+.vfx{
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+    padding: 25% 15%;
+    box-sizing: border-box;
+}
+.about_main{
+    width: 100%;
+    height: 20%;
+    color: #fd6a3a;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 600;
+    /* background: red; */
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    padding-left: 5%;
+}
+.about_text{
+    position: absolute;
+    top: 50%;
+    margin-top: 35%;
+    left: 50%;
+    margin-left: -42%;
+    width: 55%;
+    height: 6%;
+    font-size: 0.7rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    /* border: 1px white solid; */
+    border-radius: 1rem;
+}
+.text_line{
+    margin-top: 35%;
+}
+.pre_but{
+    position: fixed;
+    width: 50%;
+    height: 10%;
+    bottom: 5%;
+    left: 10%;
+  }
+  .next_but{
+    position: fixed;
+    width: 50%;
+    height: 10%;
+    bottom: 5%;
+    right: 10%;
+  }
+  .pre_but>img{
+  
+    width: 50%;
+  }
+  .next_but>img{
+    width: 50%;
+    float: right;
+  }
+
+
+
+
+
+
+
+}

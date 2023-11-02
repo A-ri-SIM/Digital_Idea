@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Parallax Photo Carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+<script>
+  $(document).ready(function(){
+
+
+      let click_num=0;
+      $('.toggle').click(function(){
+          $(this).toggleClass('active');
+          if(click_num == 0){
+              $(".menu_wrap").fadeIn();
+              click_num++;
+          }else{
+              $(".menu_wrap").fadeOut();
+              click_num--;
+          }
+          
+      });
+
+      
+  })
+  
+</script>
+
+</head>
+<body>
+<div class="com_mo">
+  <!-- partial:index.partial.html -->
+<div class="stage">
+  <!-- <div class="logo_wrap"> -->
+    <a href="../main_mo/main_mo.html" class="logo"><img src="./img/logo.png" alt=""></a>
+    <div class='toggle'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div class="menu_wrap">
+        <a href="../about_mo/about_mo.html" class="menu">ABOUT</a>
+        <a href="../vfx_mo/vfx_mo.html" class="menu">VFX</a>
+        <a href="../arvr_mo/arvr.html" class="menu">AR/VR</a>
+        <a href="../com_mo/com_mo.html" class="menu">COMMERCIAL</a>
+        <a href="../office_mo/office_mo.html" class="menu">CONTACT US</a>
+    </div>
+<!-- </div> -->
+  <div class="container">
+    <div class="ring">
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/Aroma%20of%20Delicious%20Shin%20Ramyun.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/Aroma%20of%20Delicious%20Shin%20Ramyun.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_170109%20-%20Hyundai_CES2017_1m_Eng_1_LOGO.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_170109%20-%20Hyundai_CES2017_1m_Eng_1_LOGO.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_%EA%B2%BD%EB%8F%99%EB%82%98%EB%B9%84%EC%97%94.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_%EA%B2%BD%EB%8F%99%EB%82%98%EB%B9%84%EC%97%94.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_%EC%B9%A0%EC%84%B1%EC%82%AC%EC%9D%B4%EB%8B%A4_%EB%B4%84%ED%8E%B8.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_%EC%B9%A0%EC%84%B1%EC%82%AC%EC%9D%B4%EB%8B%A4_%EB%B4%84%ED%8E%B8.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_Gear%20VR%20Volcano%20Bungee%20360%C2%BA%20experience.mp4"></video>
+      </div>
+      <div class="img">
+        <video autoplay loop muted playsinline src="http://www.digitalidea.co.kr/img_up/NM_Gear%20VR%20Volcano%20Bungee%20360%C2%BA%20experience.mp4"></video>
+      </div>
+    </div>
+  </div>
+  <a href="../arvr_mo/arvr.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+  <a href="../about_mo/about_mo.html" class="next_but"><img src="./img/next_but.png" alt=""></a>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script><script  src="./script/script.js"></script>
+</div>
+
+
+</body>
+</html>

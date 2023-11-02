@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalIdea</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo_title.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./css/about.css" rel="stylesheet" type="text/css">
+    <link href="./css/about_mo.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/about.js"></script>
+    <script src="./script/about_mo.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".about_img_box,.vfx").css({
+            transitionDuration: "3s"
+            })
+            $(".bg_wrap").fadeIn(1000)
+            $(".wrap").animate({
+                left:0
+            },1000,'linear',function(){
+                
+                AOS.init();
+                $(".left_but,.scroll_img").fadeIn(500)
+                
+
+            })
+            AOS.init();
+
+            let click_num=0;
+            $('.toggle').click(function(){
+                $(this).toggleClass('active');
+                if(click_num == 0){
+                    $(".menu_wrap").fadeIn();
+                    click_num++;
+                }else{
+                    $(".menu_wrap").fadeOut();
+                    click_num--;
+                }
+                
+            });
+            
+        })
+        
+    </script>
+</head>
+<body>
+    <!-- 피씨버전 -->
+    <div class="about_pc">
+        <div class="bg_wrap"></div>
+        <div class="wrap">
+        <div class="logo_wrap">
+            <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+            <div class='toggle'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu_wrap">
+                <a href="../about/about.html" class="menu">ABOUT</a>
+                <a href="../vfx/vfx.html" class="menu">VFX</a>
+                <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+                <a href="../com/com.html" class="menu">COMMERCIAL</a>
+                <a href="../office/office2.html" class="menu">CONTACT US</a>
+            </div>
+        </div>
+        <section>
+            <div class="about_img_box box1" data-aos="fade-right">
+                <img src="./img/about_1.gif">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-up">
+                    <div class="about_main">| VFX</div>
+                    <div class="about_text">
+                        디지털 아이디어는 1998년 국내 최초 블록버스터 영화를 시작으로, 다양한 영화제작에 참여하며 영상산업을 선도해온 시각 효과 전문기업입니다. 국내외 450여 편의 영화 VFX 제작 기술과 풍부한 경험을 바탕으로 영화 뿐 아니라 국내외 영상산업 발전에 기여하고 있습니다.<br><br>
+                        아시아 최대 규모의 장비와 기술력으로 아시아 넘버원을 넘어, 글로벌 top 5의 콘텐츠 스튜디오를 향해 나아가고있습니다.
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="about_img_box box" data-aos="fade-left">
+                <img src="./img/about_2.gif">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-up-left">
+                    <div class="about_main">| Commercial</div>
+                    <div class="about_text">
+                        디지털아이디어는 시각효과(VFX)의 첨단 기술과 전문성을 바탕으로 커머셜 비즈니스 분야에서도 그 역량을 발휘합니다. 편집과 2D/3D 그래픽을 기반으로 대규모 국내외 전시영상에서부터 UHD영상, Virtual Reality, 미디어파사드, 다면 영상, Screen X 그리고 맞춤형 미디어 솔루션 등 다양한 기술집약형 콘텐츠 기획, 제작 서비스를 제공합니다.<br><br>
+                        2010년부터 지금까지 커머셜 비즈니스 분야에서 60 여 개의 영상 프로젝트에 참여했으며 기획에서부터 후반작업까지 일괄 진행하는 One-Stop Production을 갖추고 있습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="about_img_box box1" data-aos="fade-left">
+                <img src="./img/about_3.gif">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-down-right">
+                    <div class="about_main">| VR / AR</div>
+                    <div class="about_text">
+                        디지털아이디어는 시각효과(VFX)의 첨단 기술과 전문성을 바탕으로 커머셜 비즈니스 분야에서도 그 역량을 발휘합니다. 편집과 2D/3D 그래픽을 기반으로 대규모 국내외 전시영상에서부터 UHD영상, Virtual Reality, 미디어파사드, 다면 영상, Screen X 그리고 맞춤형 미디어 솔루션 등 다양한 기술집약형 콘텐츠 기획, 제작 서비스를 제공합니다.<br><br>
+                        2010년부터 지금까지 커머셜 비즈니스 분야에서 60 여 개의 영상 프로젝트에 참여했으며 기획에서부터 후반작업까지 일괄 진행하는 One-Stop Production을 갖추고 있습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="about_img_box box" data-aos="fade-up-right">
+                <img src="./img/about_4.gif">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-down">
+                    <div class="about_main">| Visual Media Lab</div>
+                    <div class="about_text">
+                        Digital creature (human/animal/imaginary) CG 개발에 대한 R&D.<br>
+                        기존의 CG Software Program들 (ex Maya)의 약점을 보완하는 회사 자체의 In-House Tool Package Program에 대한 R&D<br>
+                        위의 Focus를 지향하며, KAIST 출신 Computer Graphic Engineering 박사들을 주축으로 R&D를 진행하고 있습니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="about_img_box box1" data-aos="fade-right">
+                <img src="./img/about_5.jpg">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-up">
+                    <div class="about_main">| Renderfarm facility</div>
+                    <div class="about_text">
+                        국내최대 렌더팜보유<br>
+                        Xeon E5-2699v4 : 11,664 Core<br><br>
+                        국내 최초, 최대 GPU 팜 보유<br>
+                        GTX1080 Ti : 35,840 Cuda
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="about_img_box box" data-aos="fade-down-right">
+                <img src="./img/about_6.jpg">
+            </div>
+            <div class="about_text_box">
+                <div class="vfx" data-aos="fade-right">
+                    <div class="about_main">| Content Protection</div>
+                    <div class="about_text">
+                        All assets handled prior to the first HD<br>
+                        home-entertainment release of a feature for all<br>
+                        Disney properties, including Lucasfilm, Marvel,<br>
+                        and Pixar are considered pre-release
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="left_but" href="../main/main.html"><img  src="./img/main_but.png" alt="">
+        </a>
+        
+        <div class="scroll_img"><img src="./img/scroll.gif" alt=""></div>
+        </div>
+       
+    </div>
+    <!-- 모바일버전 -->
+    <div class="about_mo">
+        <div class="bg_wrap"></div>
+    <!-- <div class="wrap"> -->
+    <div class="logo_wrap">
+        <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        <div class='toggle'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        <div class="menu_wrap">
+            <a href="../about.html" class="menu">ABOUT</a>
+            <a href="../vfx/vfx.html" class="menu">VFX</a>
+            <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+            <a href="../com/com.html" class="menu">COMMERCIAL</a>
+            <a href="../office/office2.html" class="menu">CONTACT US</a>
+        </div>
+    </div>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-right">
+            <img src="./img/about_1.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up">
+                <div class="about_main">| VFX</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-left">
+            <img src="./img/about_2.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up-left">
+                <div class="about_main">| Commercial</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-left">
+            <img src="./img/about_3.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-down-right">
+                <div class="about_main">| VR / AR</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-up-right">
+            <img src="./img/about_4.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-down">
+                <div class="about_main">| Visual Media<br>&nbsp; Lab</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-right">
+            <img src="./img/about_5.jpg">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up">
+                <div class="about_main">| Renderfarm<br>&nbsp; facility</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-down-right">
+            <img src="./img/about_6.jpg">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-right">
+                <div class="about_main">| Content<br>&nbsp; Protection</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+        <a href="../com/com.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+        <a href="../office/office2.html" class="next_but"><img src="./img/next_but.png" alt=""></a>
+    </section>
+</div> 
+
+    </div>
+    
+</body>
+</html>

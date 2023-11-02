@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DigitalIdea</title>
+  <link rel="icon" type="image/x-icon" href="./img/logo_title.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/ar.css">
+  <script src="./script/jquery-3.6.4.js"></script>
+  <script src="./script/jquery-ui.js"></script>
+  
+  <script>
+
+    $(document).ready(function(){
+      // let ww=$(window).width();
+      $(".bg_wrap").fadeIn(1500)
+      $(".scroll,.box").animate({
+        left:0
+      },1000,'linear').css({
+        opacity: 1
+      });
+      $(".slide__project").click(function(){
+        let a=$(this).closest('article');
+        let i=a.index();
+        // alert(i)
+        $(".video_box").eq(i).slideDown(500);
+        $(".scroll").css({
+          opacity:0.2
+        })
+      })
+      $(".close_but").click(function(){
+        $(".video_box").fadeOut(500);
+        $(".scroll").css({
+          opacity:1
+        })
+      });
+      let click_num=0;
+      $('.toggle').click(function(){
+          $(this).toggleClass('active');
+          if(click_num == 0){
+              $(".menu_wrap").fadeIn();
+              click_num++;
+          }else{
+              $(".menu_wrap").fadeOut();
+              click_num--;
+          }
+          
+      });
+    
+    });
+  </script>
+
+</head>
+<body>
+<div class="bg_wrap">
+</div>
+<div class="scroll" data-scroll>
+  <div class="logo">
+    <img src="../main/main.html" alt="">
+  </div>
+  <div class="logo_wrap">
+    <div class='toggle'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div class="menu_wrap">
+      <a href="../about/about.html" class="menu">ABOUT</a>
+      <a href="../vfx/vfx.html" class="menu">VFX</a>
+      <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+      <a href="../com/com.html" class="menu">COMMERCIAL</a>
+      <a href="../office/office2.html" class="menu">CONTACT US</a>
+    </div>
+  </div>
+  <div class="scroll-content" data-scroll-content>
+    
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img js-transition-img">
+          <figure class="js-transition-img__inner">
+            <img src="./img/ar_01.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+    <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img js-transition-img">
+          <figure class="js-transition-img__inner">
+            <img src="./img/ar_2.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+    <article class="slide slide--3 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_3.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_4.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+    <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_5.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+    <article class="slide slide--3 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_6.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_7.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article> <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__img">
+          <figure>
+            <img src="./img/ar_8.jpg" draggable="false">
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+  </div>  
+  
+  <div class="scroll-content scroll-content--last" data-scroll-content>
+    
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title"><div class="js-transition-title">Red Eyes VR</div></h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    
+    <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title"><div class="js-transition-title">The Terracotta Army VR</div></h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    
+    <article class="slide slide--3 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Dinosaurs</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Pyeongchang 2018<br>olympic</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    
+    <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Bobsleigh VR</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    
+    <article class="slide slide--3 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Bling VR Game</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    <article class="slide slide--1 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Samsung <br>Galaxy Gear <br>VR</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+      </div>
+    </article>
+    
+    <article class="slide slide--2 js-slide">
+      <div class="slide__inner">
+        <div class="slide__sub-title"><span>Project</span></div>
+        <h1 class="slide__title">Submarine <br>VR</h1>
+        <div class="slide__img slide__img--proxy"></div>
+        <div class="slide__project">Play video ▷</div>
+       
+      </div>
+    </article>
+  </div>
+  <div class="scroll_text">
+    <img src="./img/scroll.gif" alt="">
+  </div>
+  <div class="scrollbar" data-scrollbar>
+   
+    <div class="scrollbar__handle js-scrollbar__handle"></div>
+  </div>
+  
+  <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+  <a class="right_but" href="../com/com.html"><img  src="./img/comm_but.png" alt=""></a>
+  <a class="left_but" href="../vfx/vfx.html"><img  src="./img/vfx_but.png" alt=""></a>
+  
+  
+ 
+</div>
+<div>
+    <div class="video_box">
+      <div class="title_box">
+        Red Eyes VR
+        <div class="close_but">X</div>
+        <img src="./img/ar_01.jpg" alt="">
+      </div>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        The Terracotta Army VR
+        <div class="close_but">X</div>
+        <img src="./img/ar_2.jpg" alt="">
+      </div>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Dinosaurs
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/ICT_%EB%8B%A4%EC%9D%B4%EB%85%B8%EC%86%8C%EC%96%B4.mp4"></video>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Pyeongchang 2018 olympic
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/ICT_2018%ED%8F%89%EC%B0%BD%EB%8F%99%EA%B3%84%EC%98%AC%EB%A6%BC%ED%94%BD%EA%B0%9C%EB%A7%89%EC%8B%9DAR_Digitalidea.mov"></video>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Bobsleigh VR
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/ICT_Bobsleigh_VR_ingame_logo.mp4"></video>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Bling VR Game
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/ICT_%EC%8A%88%ED%8D%BC%ED%94%84%EB%A0%8C%EC%A6%88_VR_Game_ingame_logo.mp4"></video>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Galaxy Gear VR
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_Gear%20VR%20Volcano%20Bungee%20360%C2%BA%20experience.mp4"></video>
+    </div>
+    <div class="video_box">
+      <div class="title_box">
+        Submarine
+        <div class="close_but">X</div>
+      </div>
+      <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/ICT_submarine.mp4"></video>
+    </div>
+</div>
+<a href="../vfx/vfx.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+  <a href="../com/com.html" class="next_but"><img src="./img/next_but.png" alt=""></a>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script  src="./script/script.js"></script>
+
+</body>
+</html>

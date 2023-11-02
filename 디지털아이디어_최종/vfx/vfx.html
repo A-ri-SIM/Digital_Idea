@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DigitalIdea</title>
+  <link rel="icon" type="image/x-icon" href="./img/logo_title.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+<link rel='stylesheet' href='./css/swiper.min.css'><link rel="stylesheet" href="./css/vfx.css">
+<link rel="stylesheet" href="./css/normalize.min.css">
+<script src="./script/jquery-3.6.4.js"></script>
+<script src="./script/jquery-ui.js"></script>
+<script>
+  $(document).ready(function(){
+	let ww=$(document).width();
+    // alert(ww);
+	
+
+    let click_num=0;
+    $('.toggle').click(function(){
+      
+        $(this).toggleClass('.active');
+        if(click_num == 0){
+            $(".menu_wrap").fadeIn();
+            click_num++;
+        }else{
+            $(".menu_wrap").fadeOut();
+            click_num--;
+        }
+        
+    });
+
+
+canvas_view();
+
+$(window).resize(function(){
+ canvas_view();
+
+})
+
+
+function canvas_view(){
+    ww=$(window).width();
+
+    if(ww>979){
+		$("canvas").css({
+			display:"block"
+		})
+		$("canvas").animate({
+			top:0
+		},1000)
+		
+	}else{
+	$("canvas").css({
+		display:"none"
+	})
+	}
+}
+
+
+
+
+
+  });//end
+</script>
+</head>
+<body>
+<div class="vfx_pc">
+<script id="vertexShader" type="x-shader/x-vertex">
+    varying vec2 vUv;
+
+    void main() {
+        vUv = uv;
+
+        gl_Position =   projectionMatrix * 
+                        modelViewMatrix * 
+                        vec4(position,1.0);
+    }
+</script>
+
+<script id="fragmentShader" type="x-shader/x-fragment">
+    uniform sampler2D image;
+    uniform sampler2D displacement;
+    uniform float u_time;
+    uniform float u_progress;
+    uniform float u_mouse;
+
+    varying vec2 vUv;
+
+    void main() {
+        vec4 displace = texture2D(displacement, vUv);
+        vec2 displacedUV = vec2(vUv.x + u_progress * 0.1 * sin(vUv.y * 4.0 + u_time), vUv.y);
+        
+        vec4 color = texture2D(image, displacedUV);
+        
+        color.r = texture2D(image, displacedUV + vec2(0., 10.0 * 0.005) * (u_progress * 5.)).r;
+        color.g = texture2D(image, displacedUV + vec2(0., 10.0 * 0.007) * (u_progress * 2.)).g;
+        color.b = texture2D(image, displacedUV + vec2(0., 10.0 * 0.008) * (u_progress * 3.0)).b;
+        
+        gl_FragColor = color;
+    }
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src="./script/script.js"></script>
+<a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+  <a class='toggle'>
+      <span></span>
+      <span></span>
+      <span></span>
+  </a>
+  <div class="menu_wrap">
+      <a href="../about/about.html" class="menu">ABOUT</a>
+      <a href="../vfx/vfx.html" class="menu">VFX</a>
+      <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+      <a href="../com/com.html" class="menu">COMMERCIAL</a>
+      <a href="../office/office2.html" class="menu">CONTACT US</a>
+  </div>
+    <a class="right_but" href="../arvr/arvr.html"><img  src="./img/arvr_but.png" alt=""></a>
+    <a href="../main/main.html" class="top_but_text">MAIN</a>
+    <a href="../main/main.html" class="top_box">
+        <div class="top_but_arrow">
+            <img src="./img/click.gif">
+        </div>
+    </a>
+</div>
+ <div class="vfx_mo">
+    <div class="logo_wrap">
+		<a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+		<div class='toggle'>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="menu_wrap">
+			<a href="../about/about.html" class="menu">ABOUT</a>
+			<a href="../vfx/vfx.html" class="menu">VFX</a>
+			<a href="../arvr/arvr.html" class="menu">AR/VR</a>
+			<a href="../com/com.html" class="menu">COMMERCIAL</a>
+			<a href="../office/office.html" class="menu">CONTACT US</a>
+		</div>
+	</div>
+	<a href="../main/main.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+	<a href="../arvr/arvr.html" class="next_but"><img src="./img/next_but.png" alt=""></a>
+<!-- partial:index.partial.html -->
+
+       <!-- Slider -->
+        <div class="swiper-container rfa-slide-container rfa-slide-container--chapter-select">
+
+			<!-- Slide Content -->
+			<div class="swiper-wrapper rfa-chap-sect-wrapper">
+				
+				<!-- Slides -->
+				
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap1" data-hash="blackPanther">
+					<div class="slide-cover"></div>
+					<h3>2022</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →" style="text-align: center;">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap2" data-hash="storm">
+					<div class="slide-cover"></div>
+					<h3>2021</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap3" data-hash="lukeCage">
+					<div class="slide-cover"></div>
+					<h3>2020</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap4" data-hash="bishop">
+					<div class="slide-cover"></div>
+					<h3>2019</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap5" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2018</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap6" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2017</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap7" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2016</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap8" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2015</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap9" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2014</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+				<div class="swiper-slide rfa-chap-sect-slide slide__chap10" data-hash="blade">
+					<div class="slide-cover"></div>
+					<h3>2013~</h3>
+					
+					<a class="chap-btn--a" href="http://www.digitalidea.co.kr/myboard/vfx">
+						<button class="button button--winona button--border-thin button--round-s" data-text="GO page →">
+							<span>view more</span>
+						</button>
+					</a>
+				</div>
+			</div>
+
+			<!-- If we need pagination -->
+			<div id="rfaPagePagination" class="swiper-pagination hide-swiper-pagination"></div>
+		</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/sliiide.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script><script  src="./script/script_mo.js"></script>
+ </div>
+</body>
+</html>

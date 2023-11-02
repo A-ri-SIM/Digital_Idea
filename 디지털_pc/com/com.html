@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalIdea</title>
+    <link rel="stylesheet" href="./css/com.css">
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/box_move.js"></script>
+    <script>
+    $(document).ready(function(){
+      
+        $("#canvas").animate({
+            left:0
+        },1500,'linear',function(){
+            $(".scroll_bar").fadeIn(500);
+        });
+        $(".toggle").animate({
+            right:'2%'
+        },1500,'linear');
+        let click_num=0;
+        $('.toggle').click(function(){
+            $(this).toggleClass('active');
+            if(click_num == 0){
+                $(".menu_wrap").fadeIn();
+                click_num++;
+            }else{
+                $(".menu_wrap").fadeOut();
+                click_num--;
+            }
+            
+        });
+        setInterval(function(){
+            $(".scroll_bar").animate({
+                width:'200px'
+            },2500,'linear',function(){
+                $(".scroll_bar").css({
+                    width:0
+                })
+            })
+        },3000)
+       
+    
+    });
+    </script>
+</head>
+<body>
+    <div id="canvas">
+        <div id="rotation">
+            <div class="face face_1">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/Aroma%20of%20Delicious%20Shin%20Ramyun.mp4"></video>
+            </div>
+            <div class="face face_2">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_170109%20-%20Hyundai_CES2017_1m_Eng_1_LOGO.mp4"></video>
+            </div>
+            <div class="face face_3">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_%EA%B2%BD%EB%8F%99%EB%82%98%EB%B9%84%EC%97%94.mp4"></video>
+            </div>
+            <div class="face face_4">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_%EC%B9%A0%EC%84%B1%EC%82%AC%EC%9D%B4%EB%8B%A4_%EB%B4%84%ED%8E%B8.mp4"></video>
+            </div>
+            <div class="face face_5">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_Gear%20VR%20Volcano%20Bungee%20360%C2%BA%20experience.mp4"></video>
+            </div>
+            <div class="face face_6">
+                <video autoplay loop muted src="http://www.digitalidea.co.kr/img_up/NM_Leanage.mp4"></video>
+            </div>
+
+        </div>
+        <div id="text_rotation">
+            <div class="text_face text_face_1">Aroma of Delicious<br>Shin Ramyun
+            </div>
+            <div class="text_face text_face_2">Hyundai CES
+            </div>
+            <div class="text_face text_face_3">Kyungdong Navien
+            </div>
+            <div class="text_face text_face_4">Chilsung Cider<br>ver.Spring
+            </div>
+            <div class="text_face text_face_5">Gear VR Volcano Bungee <br>360º experience
+            </div>
+            <div class="text_face text_face_6">Lineage RK Mobile
+            </div>
+
+        </div>
+        <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        <a class="right_but" href="../office/office2.html"><img  src="./img/right_but.png" alt=""></a>
+        <a class="left_but" href="../ARVR/arvr.html"><img  src="./img/left_but.png" alt=""></a>
+        
+</div>
+
+    <div class='toggle'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div class="menu_wrap">
+        <a href="../about/about.html" class="menu">ABOUT</a>
+      <a href="../vfx/vfx.html" class="menu">VFX</a>
+      <a href="../ARVR/arvr.html" class="menu">AR/VR</a>
+      <a href="../com/com.html" class="menu">COMMERCIAL</a>
+      <a href="../office/office2.html" class="menu">CONTACT US</a>
+    </div>
+    <div class="scroll_bar">
+        <img src="./img/scroll.png" alt="">
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@media all and (min-width:801px){
+  .box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 999999;
+  }
+    .menu_wrap{
+        width: 100%;
+        height: 100vh;
+        background: white;
+        opacity: 0.8;
+        padding-top: 5.95%;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none;
+      }
+      .menu{
+        display: block;
+        width: 100%;
+        color: black;
+        font-size: 90px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 2.75%;
+        margin-left: 0.47%;
+        font-family: 'Prompt', sans-serif;
+      }
+      .slide {
+        display: flex;
+        width: 50vw;
+        height: 100%;
+        padding: 20vh 0;
+      }
+      .slide:last-child {
+        width: 65vw;
+        padding-right: 15vw;
+      }
+      .slide__img {
+        /* width: 500px;
+        height: 400px; */
+        position: relative;
+        overflow: hidden;
+        padding-top: 65%;
+        width: 90%;
+      }
+      .scrollbar {
+        position: absolute;
+        bottom: 7.5%;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+      .scroll_text{
+        width: 50px;
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        margin-left: -25px;
+      }
+      .logo{
+        display: block;
+        width: 5vw;
+        height: 50px;
+        position: absolute;
+        top: 1%;
+        left:1%;
+      }
+      .right_but{
+        width: 140px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        margin-top: -75px;
+        /* transform: scale(0.1); */
+        transition-duration: 1s;
+      }
+      
+      .left_but{
+        width: 140px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 1%;
+        margin-top: -75px;
+        /* transform: scale(0.3); */
+        transition-duration: 1s;
+      }
+      .right_but:hover{
+        transform: scale(0.9);
+      }
+      .left_but:hover{
+        transform: scale(0.9);
+      }
+      .title_box{
+        width: 100%;
+        height: 10%;
+        font-size: 55px;
+        line-height: 100%;
+        letter-spacing: 2px;
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .slide__inner {
+        position: relative;
+        padding-left: 15vw;
+        width: 100%;
+      }
+      .slide__sub-title {
+        position: absolute;
+        top: 15%;
+        left: 5vw;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1vw;
+      }
+      .slide__title {
+        position: absolute;
+        top: 12%;
+        left: 5vw;
+        color: #fff;
+        font-size: 3vw;
+        z-index: 2;
+        overflow: hidden;
+      }
+      .slide__project {
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        font-size: 1.15vw;
+        padding-top: 1.5vw;
+        cursor: pointer;
+      }
+      .pre_but,.next_but{
+        display: none;
+      }
+}
+@media all and (max-width:800px){
+    html{
+        height: 150%;
+      }
+      .box{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 999999;
+      }
+    .menu_wrap{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    opacity: 0.8;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    padding-top: 40%;
+    }
+    .menu{
+        display: block;
+        width: 100%;
+        color: black;
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 9%;
+        font-family: 'Prompt', sans-serif;
+      }
+      .slide {
+        display: flex;
+        width: 80vw;
+        height: 100%;
+        padding: 25vh 0;
+      }
+      .slide:last-child {
+        width: 80vw;
+        padding-right: 15vw;
+      }
+      .slide__img {
+        /* width: 500px;
+        height: 400px; */
+        position: relative;
+        overflow: hidden;
+        padding-top: 65%;
+        width: 100%;
+      }
+      .scrollbar {
+        position: absolute;
+        bottom: 20%;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+      .scroll_text{
+        display: none;
+      }
+      .title_box{
+        width: 100%;
+        height: 10%;
+        font-size: 55px;
+        line-height: 100%;
+        letter-spacing: 2px;
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .logo{
+        display: block;
+        width: 20vw;
+        height: 50px;
+        position: absolute;
+        top: 1%;
+        left:1%;
+      }
+      .logo>img{
+        width: 100%;
+      }
+      .pre_but{
+        position: fixed;
+        width: 50%;
+        height: 10%;
+        bottom: 5%;
+        left: 10%;
+      }
+      .next_but{
+        position: fixed;
+        width: 50%;
+        height: 10%;
+        bottom: 5%;
+        right: 10%;
+      }
+      .pre_but>img{
+      
+        width: 50%;
+      }
+      .next_but>img{
+        width: 50%;
+        float: right;
+      }
+      .slide__inner {
+        position: relative;
+        padding-left: 15vw;
+        width: 100%;
+      }
+      .slide__sub-title {
+        position: absolute;
+        top: 10%;
+        left: 5vw;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 4vw;
+      }
+      .slide__title {
+        position: absolute;
+        top: 12%;
+        left: 5vw;
+        color: #fff;
+        font-size: 7vw;
+        z-index: 2;
+        overflow: hidden;
+      }
+      .slide__project {
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 1%;
+        font-size: 3vw;
+        padding-top: 1.5vw;
+        cursor: pointer;
+      }
+}

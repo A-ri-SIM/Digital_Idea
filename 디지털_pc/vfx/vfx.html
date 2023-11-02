@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DigitalIdea</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<script src="./script/jquery-3.6.4.js"></script>
+<script src="./script/jquery-ui.js"></script>
+<script>
+  $(document).ready(function(){
+    let click_num=0;
+    $('.toggle').click(function(){
+      
+        $(this).toggleClass('active');
+        if(click_num == 0){
+            $(".menu_wrap").fadeIn();
+            click_num++;
+        }else{
+            $(".menu_wrap").fadeOut();
+            click_num--;
+        }
+        
+    });
+    
+    setInterval(function(){
+        $(".top_but_arrow").animate({
+            height: '70px'
+        },2500,'linear',function(){
+            $(".top_but_arrow").css({
+                height: 0
+            })
+        })
+    },3000)
+  });//end
+</script>
+</head>
+<body>
+  
+<!-- partial:index.partial.html -->
+<script id="vertexShader" type="x-shader/x-vertex">
+    varying vec2 vUv;
+
+    void main() {
+        vUv = uv;
+
+        gl_Position =   projectionMatrix * 
+                        modelViewMatrix * 
+                        vec4(position,1.0);
+    }
+</script>
+
+<script id="fragmentShader" type="x-shader/x-fragment">
+    uniform sampler2D image;
+    uniform sampler2D displacement;
+    uniform float u_time;
+    uniform float u_progress;
+    uniform float u_mouse;
+
+    varying vec2 vUv;
+
+    void main() {
+        vec4 displace = texture2D(displacement, vUv);
+        vec2 displacedUV = vec2(vUv.x + u_progress * 0.1 * sin(vUv.y * 4.0 + u_time), vUv.y);
+        
+        vec4 color = texture2D(image, displacedUV);
+        
+        color.r = texture2D(image, displacedUV + vec2(0., 10.0 * 0.005) * (u_progress * 5.)).r;
+        color.g = texture2D(image, displacedUV + vec2(0., 10.0 * 0.007) * (u_progress * 2.)).g;
+        color.b = texture2D(image, displacedUV + vec2(0., 10.0 * 0.008) * (u_progress * 3.0)).b;
+        
+        gl_FragColor = color;
+    }
+</script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src="./script/script.js"></script>
+<a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+  <a class='toggle'>
+      <span></span>
+      <span></span>
+      <span></span>
+  </a>
+  <div class="menu_wrap">
+      <a href="../about/about.html" class="menu">ABOUT</a>
+      <a href="../vfx/vfx.html" class="menu">VFX</a>
+      <a href="../ARVR/arvr.html" class="menu">AR/VR</a>
+      <a href="../com/com.html" class="menu">COMMERCIAL</a>
+      <a href="../office/office2.html" class="menu">CONTACT US</a>
+  </div>
+    <a class="right_but" href="../ARVR/arvr.html"><img  src="./img/right_but.png" alt=""></a>
+    <a href="../main/main.html" class="top_but_text">MAIN</a>
+    <a href="../main/main.html" class="top_box">
+        <div class="top_but_arrow">
+            <img src="./img/bottom_arrow.png">
+        </div>
+    </a>
+  
+</body>
+</html>

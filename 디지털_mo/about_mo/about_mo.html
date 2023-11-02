@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalIdeaAbout_mo</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./css/about_mo.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./css/aos.css" rel="stylesheet"> -->
+    
+    
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script/about_mo.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            let click_num=0;
+            $('.toggle').click(function(){
+                $(this).toggleClass('active');
+                if(click_num == 0){
+                    $(".menu_wrap").fadeIn();
+                    click_num++;
+                }else{
+                    $(".menu_wrap").fadeOut();
+                    click_num--;
+                }
+                
+            });
+            AOS.init();
+            
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="about_mo">
+        <div class="bg_wrap"></div>
+    <!-- <div class="wrap"> -->
+    <div class="logo_wrap">
+        <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        <div class='toggle'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        <div class="menu_wrap">
+            <a href="./about.html" class="menu">ABOUT</a>
+            <a href="../vfx/vfx.html" class="menu">VFX</a>
+            <a href="../ARVR/arvr.html" class="menu">AR/VR</a>
+            <a href="../com/com.html" class="menu">COMMERCIAL</a>
+            <a href="../office/office2.html" class="menu">CONTACT US</a>
+        </div>
+    </div>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-right">
+            <img src="./img/about_1.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up">
+                <div class="about_main">| VFX</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-left">
+            <img src="./img/about_2.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up-left">
+                <div class="about_main">| Commercial</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-left">
+            <img src="./img/about_3.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-down-right">
+                <div class="about_main">| VR / AR</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-up-right">
+            <img src="./img/about_4.gif">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-down">
+                <div class="about_main">| Visual Media<br>&nbsp; Lab</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box1" data-aos="fade-right">
+            <img src="./img/about_5.jpg">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-up">
+                <div class="about_main">| Renderfarm<br>&nbsp; facility</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_img_box box" data-aos="fade-down-right">
+            <img src="./img/about_6.jpg">
+        </div>
+        <div class="about_text_box">
+            <div class="vfx" data-aos="fade-right">
+                <div class="about_main">| Content<br>&nbsp; Protection</div>
+                <a href="http://www.digitalidea.co.kr/page/about_1" class="about_text text_line">view more →</a>
+            </div>
+        </div>
+        <a href="../com_mo/com_mo.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+        <a href="../office_mo/office_mo.html" class="next_but"><img src="./img/next_but.png" alt=""></a>
+    </section>
+</div> 
+
+    </div>
+    
+</body>
+</html>

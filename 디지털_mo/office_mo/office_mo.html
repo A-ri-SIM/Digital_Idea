@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalIdeaOffice_mo</title>
+    <link href="./css/office_mo.css" rel="stylesheet">
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/office_mo.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            let click_num=0;
+            $('.toggle').click(function(){
+                $(this).toggleClass('active');
+                if(click_num == 0){
+                    $(".menu_wrap").fadeIn();
+                    click_num++;
+                }else{
+                    $(".menu_wrap").fadeOut();
+                    click_num--;
+                }
+                
+            });
+            
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="office_mo">
+        <div class="logo_wrap">
+            <a href="../main_mo/main_mo.html" class="logo"><img src="./img/logo.png" alt=""></a>
+            <div class='toggle'>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            <div class="menu_wrap">
+                <a href="../about_mo/about_mo.html" class="menu">ABOUT</a>
+                <a href="../vfx_mo/vfx_mo.html" class="menu">VFX</a>
+                <a href="../arvr_mo/arvr.html" class="menu">AR/VR</a>
+                <a href="../com_mo/com_mo.html" class="menu">COMMERCIAL</a>
+                <a href="../office_mo/office_mo.html" class="menu">CONTACT US</a>
+            </div>
+        </div>
+        <div class="office_wrap">
+            <div class="office_con">
+                <img src="./img/seoul_office.png" alt="seoul_office">
+                <div class="text seoul_text">
+                    <div class="office_location">
+                        Korea Seoul Office <br><br>
+                    </div>
+                    <div class="office_address">
+                        8F, SK M-City Office tower, 195, Baengma-ro,<br>
+                        Ilsandong-gu, Goyang-si, Gyeonggi-do,<br>Republic of Korea 10403<br><br>
+                    </div>
+                    <div class="office_info">
+                        EMAIL idea@digitalidea.co.kr<br>
+                        TEL +82-31-939-2200<br>
+                        FAX +82-31-904-7340
+                    </div>
+                </div>
+            </div>
+            <div class="office_con">
+                <img src="./img/busan_office.png" alt="busan_office">
+                <div class="text busan_text">
+                    <div class="office_location">
+                        Korea Busan &nbsp; &nbsp; Office &nbsp; &nbsp; <br><br>
+                    </div>
+                    <div class="office_address">
+                        1204-1205, 39, Centum seo-ro, Haeundae-gu,<br>
+                        Busan, Republic of Korea 48059<br><br>
+                    </div>
+                    <div class="office_info info_busan">
+                        EMAIL idea@digitalidea.co.kr<br>
+                        TEL +82-31-939-2200<br>                     
+                        FAX +82-31-904-7340       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="../about_mo/about_mo.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+        <!-- <a href="../vfx_mo/vfx_mo.html" class="next_but"><img src="./img/next_but.png" alt=""></a> -->
+    </div>
+    
+</body>
+</html>

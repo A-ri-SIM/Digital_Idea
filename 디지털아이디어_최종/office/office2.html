@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalIdea</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo_title.png">
+    <link href="./css/office2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/office_mo.css">
+    <script src="./script/jquery-3.6.4.js"></script>
+    <script src="./script/jquery-ui.js"></script>
+    <script src="./script/office2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".box").animate({
+                left:0
+            },1000,'linear')
+            let click_num=0;
+            $('.toggle').click(function(){
+                $(this).toggleClass('active');
+                if(click_num == 0){
+                    $(".menu_wrap").fadeIn();
+                    click_num++;
+                }else{
+                    $(".menu_wrap").fadeOut();
+                    click_num--;
+                }
+                
+            });
+            // $(".menu").eq(1).click(function(){
+            //     $("#move_box").animate({
+            //     top:-wh
+            // },1000)
+            // })
+            
+        })
+        
+    </script>
+</head>
+<body>
+<div class="box">
+    <div class="logo_wrap">
+        <a href="../main/main.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        <div class='toggle'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        <div class="menu_wrap">
+            <a href="../about/about.html" class="menu">ABOUT</a>
+            <a href="../vfx/vfx.html" class="menu">VFX</a>
+            <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+            <a href="../com/com.html" class="menu">COMMERCIAL</a>
+            <a href="../office/office2.html" class="menu">CONTACT US</a>
+        </div>
+    </div>
+    
+    <div class="splitview skewed">
+        <div class="panel bottom">
+            <div class="content">
+                <div class="description">
+                    <div class="office_location">
+                        Korea Busan Office<br><br>
+                    </div>
+                    <div class="office_address">
+                        1204-1205, 39, Centum seo-ro, Haeundae-gu,<br>
+                        Busan, Republic of Korea 48059<br><br>
+                    </div>
+                    <div class="office_info info_busan">
+                        EMAIL idea@digitalidea.co.kr<br>
+                        TEL +82-31-939-2200<br>                     
+                        FAX +82-31-904-7340       
+                    </div>
+                </div>
+
+                <img src="./img/busan_office.jpg" alt="Original">
+            </div>
+        </div>
+
+        <div class="panel top">
+            <div class="content">
+                <div class="description">
+                    <div class="office_location">
+                        Korea Seoul Office<br><br>
+                    </div>
+                    <div class="office_address">
+                        8F, SK M-City Office tower, 195, Baengma-ro,<br>
+                        Ilsandong-gu, Goyang-si, Gyeonggi-do,<br>Republic of Korea 10403<br><br>
+                    </div>
+                    <div class="office_info">
+                        EMAIL idea@digitalidea.co.kr<br>
+                        TEL +82-31-939-2200<br>
+                        FAX +82-31-904-7340
+                    </div>
+                </div>
+
+                <img src="./img/seoul_office.jpg" alt="Duotone">
+            </div>
+        </div>
+
+        <div class="handle"></div>
+    </div>
+    <a class="left_but" href="../com/com.html"><img  src="./img/com_but.png" alt=""></a>
+</div>
+<div class="office_mo">
+    <div class="logo_wrap">
+        <a href="../main_mo/main_mo.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        <div class='toggle'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        <div class="menu_wrap">
+            <a href="../about/about.html" class="menu">ABOUT</a>
+            <a href="../vfx/vfx.html" class="menu">VFX</a>
+            <a href="../arvr/arvr.html" class="menu">AR/VR</a>
+            <a href="../com/com.html" class="menu">COMMERCIAL</a>
+            <a href="../office/office2.html" class="menu">CONTACT US</a>
+        </div>
+    </div>
+    <div class="office_wrap">
+        <div class="office_con">
+            <img src="./img/seoul_office.png" alt="seoul_office">
+            <div class="text seoul_text">
+                <div class="office_location">
+                    Korea Seoul<br>Office <br><br>
+                </div>
+                <div class="office_address">
+                    8F, SK M-City Office tower, 195, Baengma-ro,<br>
+                    Ilsandong-gu, Goyang-si, Gyeonggi-do,<br>Republic of Korea 10403<br><br>
+                </div>
+                <div class="office_info">
+                    EMAIL idea@digitalidea.co.kr<br>
+                    TEL +82-31-939-2200<br>
+                    FAX +82-31-904-7340
+                </div>
+            </div>
+        </div>
+        <div class="office_con">
+            <img src="./img/busan_office.png" alt="busan_office">
+            <div class="text busan_text">
+                <div class="office_location">
+                    Korea Busan<br>Office &nbsp; &nbsp; <br><br>
+                </div>
+                <div class="office_address">
+                    1204-1205, 39, Centum seo-ro, Haeundae-gu,<br>
+                    Busan, Republic of Korea 48059<br><br>
+                </div>
+                <div class="office_info info_busan">
+                    EMAIL idea@digitalidea.co.kr<br>
+                    TEL +82-31-939-2200<br>                     
+                    FAX +82-31-904-7340       
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="../about/about.html" class="pre_but"><img src="./img/pre_but.png" alt=""></a>
+</div>
+</body>
+</html>

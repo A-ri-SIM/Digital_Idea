@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@media (max-width:800px){
+    .box{
+        display: none;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        /* transition-duration: 0.5s; */
+    }
+    ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+    body{
+        /* font-size: 1em; */
+        position: relative;
+        background: url(../img/1.jpg);
+        overflow-x: hidden;
+        background: black;
+    }
+    .logo{
+        display: block;
+        width: 20vw;
+        height: 50px;
+        position: absolute;
+        top: 1%;
+        left:1%;
+      }
+      .menu_wrap{
+        width: 100%;
+        height: 100vh;
+        background: white;
+        opacity: 0.8;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none;
+        padding-top: 40%;
+    }
+    .menu{
+        display: block;
+        width: 100%;
+        color: black;
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 9%;
+        font-family: 'Prompt', sans-serif;
+    }
+    .menu:hover{
+        color: white;
+        /* border: 2px solid #F07339; */
+        -webkit-text-stroke:3px #F07339;
+    }
+      .toggle {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 1.1%;
+        right: 2%;
+        z-index: 999999;
+      }
+      .toggle span {
+        display: block;
+        background: #FFF;
+        width: 80%;
+        height: 3px;
+        border-radius: 2px;
+        transition: 0.25s margin 0.25s, 0.25s transform;
+      }
+      .toggle span:nth-child(1) {
+          margin-bottom: 8px;
+      }
+      .toggle span:nth-child(3) {
+          margin-top: 8px;
+      }
+      .toggle.active span {
+          transition: 0.25s margin, 0.25s transform 0.25s;
+          background: black;
+      }
+      .toggle.active span:nth-child(1) {
+        margin-top: 8px;
+        margin-bottom: -4px;
+          transform: rotate(45deg);
+      }
+      .toggle.active span:nth-child(2) {
+          transform: rotate(45deg);
+      }
+      .toggle.active span:nth-child(3) {
+        margin-top: -4px;
+          transform: rotate(135deg);
+      }
+      
+    .office_wrap{
+        width: 100%;
+        height: 100vh;
+        background: url(../img/1.jpg);
+    }
+    .office_con{
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .office_con>img{
+        position: absolute;
+        top: 50%;
+        margin-top: -15%;
+
+    }
+    .office_con:nth-child(2)>img{
+        margin-top: -42%;
+    }
+    .text{
+        width: 35%;
+        height: 46%;
+        position: absolute;
+        /* background: red; */
+    }
+    .seoul_text{
+        top: 50%;
+        left: 50%;
+        margin-top: -12%;
+        margin-left: 11%;
+        text-align: right;
+    }
+    .busan_text{
+        top:50%;
+        left: 50%;
+        margin-top: -37%;
+        margin-left: -47%;
+    }
+    .office_location{
+        color: #fd6a3a;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: -4%;
+        /* background: yellow; */
+    }
+    .office_address{
+        font-size: 0.6rem;
+    }
+    .office_info{
+        font-size: 0.6rem;
+    }
+    .pre_but{
+        position: fixed;
+        width: 50%;
+        height: 10%;
+        bottom: 5%;
+        left: 10%;
+      }
+      .next_but{
+        position: fixed;
+        width: 50%;
+        height: 10%;
+        bottom: 5%;
+        right: 10%;
+      }
+      .pre_but>img{
+      
+        width: 50%;
+      }
+      .next_but>img{
+        width: 50%;
+        float: right;
+      }
+}
